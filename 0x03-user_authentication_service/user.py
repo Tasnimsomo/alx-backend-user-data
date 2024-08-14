@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""0. User model"""
 
 from sqlalchemy import create_engine, Column, Integer, String, Float, DateTime, ForeignKey, Table, Text
 from sqlalchemy.ext.declarative import declarative_base
@@ -8,6 +9,9 @@ Base = declarative_base()
 
 
 class User(Base):
+    """
+    create a SQLAlchemy model named User for a database table named users
+    """
     __tablename__ = 'users'
 
     id = Column(Integer, primary_key=True)
